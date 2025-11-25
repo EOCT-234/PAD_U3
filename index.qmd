@@ -153,9 +153,11 @@ plot(imgp5)
 
 ### Video sobre el procedimiento realizado
 
-https://drive.google.com/file/d/1lvFd9IwVYwDmb75-5tVf4ziXNvXcP0K4/view?usp=drive_link
+```{r}
+# https://drive.google.com/file/d/1lvFd9IwVYwDmb75-5tVf4ziXNvXcP0K4/view?usp=drive_link
+```
 
-##Base de datos obtenida de la medición manual
+## Base de datos obtenida de la medición manual
 
 ```{r}
 url <- "https://docs.google.com/spreadsheets/d/1XddbJV_9Ru2_ns5UJX_xJ7c7wQ9g_u5Jge-AJNpdVdQ/edit?usp=sharing"
