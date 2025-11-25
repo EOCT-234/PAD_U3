@@ -25,6 +25,9 @@ library(grid)
 library(htmltools)
 library(httr)
 library(googlesheets4)
+library(dplyr)
+library(knitr)
+library(DT)
 ```
 
 ## Descarga de imágenes
@@ -155,13 +158,11 @@ https://drive.google.com/file/d/1lvFd9IwVYwDmb75-5tVf4ziXNvXcP0K4/view?usp=drive
 ##Base de datos obtenida de la medición manual
 
 ```{r}
-url <- "https://docs.google.com/spreadsheets/d/1XddbJV_9Ru2_ns5UJX_xJ7c7wQ9g_u5Jge-AJNpdVdQ/edit?usp=sharing
-"
-gs <- url %>%
-  as_sheets_id()
+url <- "https://docs.google.com/spreadsheets/d/1XddbJV_9Ru2_ns5UJX_xJ7c7wQ9g_u5Jge-AJNpdVdQ/edit?usp=sharing"
 
-MEDICION <- gs %>%
-  range_read(sheet = "MEDICION")
+gs <- url %>% as_sheets_id()
 
-View(MEDICION)
+MEDICION <- gs %>% range_read(sheet = "MEDICION")
+
+DT::datatable(MEDICION)
 ```
